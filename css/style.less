@@ -1,0 +1,278 @@
+// MAIN
+
+html *,
+html ::after,
+html ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.sp-wrapper {
+  max-width: 1000px;
+  min-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 50px auto;
+  padding: 30px 0;
+
+  font-family: "Bebas Neue", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sp-container {
+  max-width: 870px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.sp-header {
+  width: 100%;
+  height: 103px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-start,
+.sp-question,
+.sp-result {
+  text-align: center;
+}
+
+.sp-start__bg {
+  height: 446px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: url(../img/main-bg.png) top center no-repeat;
+}
+
+.sp-start__title,
+.sp-question__title,
+.sp-result__title {
+  font-size: 60px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  line-height: 55px;
+}
+
+.sp-start__title,
+.sp-question__title,
+.sp-result__title {
+  margin-bottom: 19px;
+}
+
+.sp-start__title {
+  color: #ffffff;
+}
+
+.sp-start__text,
+.sp-question__text,
+.sp-result__text,
+.sp-result__name {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.84px;
+}
+
+.sp-start__text {
+  margin-bottom: 27px;
+
+  color: #ffffff;
+}
+
+.sp-start__btn,
+.sp-question__btn,
+.sp-result__btn {
+  width: 100%;
+  margin: 0 auto;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Bebas Neue", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+
+  background-color: #000;
+
+  cursor: pointer;
+}
+
+.sp-start__btn,
+.sp-question__btn {
+  max-width: 120px;
+}
+
+
+.sp-question__bg {
+  height: 944px;
+  padding: 95px 12px 20px;
+
+  background-color: #f9f9f9;
+}
+
+.sp-question__title {
+  color: #000;
+}
+
+.sp-question__options {
+  max-width: 751px;
+  width: 100%;
+  margin: 0 auto 24px;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  grid-row-gap: 50px;
+}
+
+.sp-question__option input[type="radio"] {
+  display: none;
+}
+
+.sp-question__option input[type="radio"]:checked + span::before {
+  background: #000;
+}
+
+.sp-question__text {
+  display: block;
+  cursor: pointer;
+
+  color: #000;
+
+  &:before {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 20px;
+
+    content: "";
+    display: block;
+
+    background-color: #fff;
+    border-radius: 10em;
+    border: 2px solid #151826;
+    transition: all 0.25s ease;
+  }
+}
+
+.options--2 {
+  .sp-question__text {
+    margin-bottom: 21px;
+  }
+}
+
+.sp-question__icon {
+  margin-bottom: 12px;
+  mix-blend-mode: multiply;
+}
+
+.sp-question__desc {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.options--3 {
+  .sp-question__option {
+    position: relative;
+    min-height: 323px;
+    &:nth-of-type(6) {
+      min-height: auto;
+      grid-column: 1 / 6;
+    }
+  }
+
+  .sp-question__icon {
+    width: 100%;
+    max-width: 126px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.sp-result__bg {
+  height: 946px;
+  padding: 103px 20px;
+
+  background-color: #f9f9f9;
+}
+
+.text--selection {
+  margin-bottom: 11px;
+}
+
+.text--lets {
+  margin-bottom: 30px;
+}
+
+.sp-result__title {
+  margin-bottom: 26px;
+}
+
+.sp-result__img {
+  margin-bottom: 19px;
+}
+
+.sp-result__name {
+  margin-bottom: 8px;
+}
+
+.sp-result__desc {
+  margin-bottom: 23px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.sp-result__btn {
+  max-width: 130px;
+}
